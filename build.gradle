@@ -27,16 +27,18 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
 
     //working
-   // compile("org.springframework.boot:spring-boot-starter:$springBootVersion")
-   // compile("org.springframework.boot:spring-boot-starter-tomcat:$springBootVersion")
-   // compile("org.springframework:spring-webmvc:5.1.5.RELEASE")
-   testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
-
+    // compile("org.springframework.boot:spring-boot-starter:$springBootVersion")
+    // compile("org.springframework.boot:spring-boot-starter-tomcat:$springBootVersion")
+    // compile("org.springframework:spring-webmvc:5.1.5.RELEASE")
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7")
+    testCompile("org.mockito:mockito-core:2.23.4")
 
 }
 
 bootRun.environment([
-        "WELCOME_MESSAGE": "hello from Rafael",
+        "WELCOME_MESSAGE": "hello from test",
+        "welcome.message": "hello from test",
         "environment.port" : "8675",
         "environment.memoryLimit":"12G",
         "environment.cfInstanceIndex}" : "34",
